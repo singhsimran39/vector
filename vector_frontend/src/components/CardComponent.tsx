@@ -36,7 +36,7 @@ interface CardInterface {
 };
 
 
-function CardComponent() {
+function CardComponent({setSelectedImage} : {setSelectedImage: Function}) {
   const [cardDetails, ] = useState(initialState);
 
 
@@ -52,6 +52,7 @@ function CardComponent() {
                 src={imageUrl}
                 alt='Not found'
                 className='card-image'
+                onClick={() => setSelectedImage(imageUrl)}
               />
             </div>
           );
