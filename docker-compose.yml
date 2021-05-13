@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  vector-backend:
+    image: vector-backend
+    container_name: vector-backend
+    build:
+      context: ./vector_backend
+    ports:
+      - 8000:8000
+    restart: on-failure
+
+  vector-frontend:
+    image: vector-frontend
+    container_name: vector-frontend
+    build:
+      context: ./vector_frontend
+    ports:
+      - 3000:3000
+    depends_on:
+      - vector-backend
