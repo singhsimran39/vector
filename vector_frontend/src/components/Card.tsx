@@ -59,7 +59,7 @@ function Card() {
                 <Draggable key={card.position} draggableId={card.title} index={cardIndex}>
                   {(provided) => (
                     <div className='card' {...provided.draggableProps} {...provided.dragHandleProps} ref={provided.innerRef}>
-                      <div className='card-content'>{card.title}</div>
+                      <div className='card-title'>{card.title}</div>
                       <img src={`https://fakeimg.pl/400x300/?text=${card.title}`} alt='' className='card-image' />
                     </div>
                   )}

@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <h1>Hello</h1>
+      <h1>Vector Task</h1>
       <CardComponent setSelectedImage={setSelectedImage} />
       {selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} />}
     </div>
